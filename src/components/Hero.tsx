@@ -77,7 +77,7 @@ export default function Hero() {
       {/* Text — mobile: bottom of screen. Desktop: top with padding */}
       <motion.div
         style={{ y: textY, opacity: textOpacity }}
-        className="absolute inset-0 z-10 flex flex-col items-center px-5 sm:px-8 text-center pt-[18vh] md:pt-[8vh] justify-start md:justify-center"
+        className="absolute inset-0 z-10 flex flex-col items-center px-5 sm:px-8 text-center pt-[18vh] md:pt-[12vh] justify-start"
       >
         <motion.div
           initial={{ scaleX: 0 }}

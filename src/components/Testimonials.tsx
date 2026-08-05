@@ -6,21 +6,21 @@ import { useLang } from './LangContext';
 
 const t = {
   bn: {
-    tag: 'কণ্ঠস্বর',
-    heading: 'যারা অলরেডি ইউজ করে\nরেজাল্ট পেয়েছে,\nতাদের মতামত।',
+    tag: 'রিভিউ',
+    heading: 'যারা রাতে ফুল পারফর্ম করছে,\nতাদের নিজেদের অভিজ্ঞতা।',
     testimonials: [
-      { quote: 'প্রথমে সন্দেহ ছিল, কিন্তু এক চামচ মিক্স আর বাম — সকালে একদম আলাদা ফিল। ইউজ করে দেখুন।', name: 'তানভীর', location: 'ঢাকা', variant: 'Saffron' },
-      { quote: 'মিক্সচার খাওয়ার পর বাম লাগাচ্ছি — পাওয়ার আস্তে আস্তে বাড়ছে, কোনো সাইড ইফেক্ট নেই।', name: 'রাকিব', location: 'চট্টগ্রাম', variant: 'Red Panax' },
-      { quote: 'প্যাকেজিং দেখেই বুঝা যায় এটা আসল জিনিস। রেজাল্টও তাই দেখাচ্ছে।', name: 'আরিফ', location: 'সিলেট', variant: 'Herbirod' },
+      { quote: 'মিলনের এক ঘণ্টা আগে ননি মিক্সচারটা খেয়ে বামটা দিলাম, আর ভাই... রেজাল্ট জাস্ট অবিশ্বাস্য! কোনো ডাউনটাইম নাই, আগের চেয়ে অনেক বেশি সময় দিতে পেরেছি। সেক্স লাইফের জন্য এটা একদম মাস-হ্যাভ।', name: 'রাকিব এইচ.', location: 'ঢাকা', variant: 'Saffron' },
+      { quote: 'ইদানিং বিছানায় স্ট্যামিনা একটু কমে গেছিল, কিন্তু এই কম্বোটা পুরো আগুন জ্বেলে দিয়েছে। চামচটা খেয়ে বামটা লাগানোর পর পার্টনার নিজেই অবাক হয়ে গেছে। পারফরম্যান্স এখন পুরো অন্য লেভেলে।', name: 'তানভীর এস.', location: 'চট্টগ্রাম', variant: 'Red Panax' },
+      { quote: 'কোনো কেমিক্যাল সাইড ইফেক্ট ছাড়া যদি সেক্স লাইফে ন্যাচারাল বুস্ট চান, তবে এটাই বেস্ট। ননি মিক্স ব্লাড ফ্লো ইনস্ট্যান্ট বাড়িয়ে দেয় আর বামটা সেন্সিভিটি ও পাওয়ার ফুল রাখে শেষ মুহূর্ত পর্যন্ত।', name: 'ইমরান কে.', location: 'সিলেট', variant: 'Saffron' },
     ],
   },
   en: {
-    tag: 'Voices',
-    heading: 'Trusted by men\nwho play hard.',
+    tag: 'Reviews',
+    heading: 'Real results from men\nwho own the night.',
     testimonials: [
-      { quote: "Was skeptical at first, but one spoon of the mix followed by the balm — mornings hit different now. Try it.", name: 'Tanvir', location: 'Dhaka', variant: 'Saffron' },
-      { quote: "After the mix I apply the balm — power builds gradually, no side effects. Already feeling the difference.", name: 'Rakib', location: 'Chittagong', variant: 'Red Panax' },
-      { quote: "Packaging says it's premium, results say it's real. No fake promises — just works.", name: 'Arif', location: 'Sylhet', variant: 'Herbirod' },
+      { quote: "Took the Noni mixture an hour before getting intimate, applied the balm, and man... the difference is unreal. Zero lag, rock solid, and lasted way longer than usual. Absolute game changer for intimacy.", name: 'Rakib H.', location: 'Dhaka', variant: 'Saffron' },
+      { quote: "My stamina in bed was dropping lately, but this combo brought the fire right back. Took the spoon, massaged the oil balm, and my partner noticed the change immediately. Unstoppable performance.", name: 'Tanvir S.', location: 'Chittagong', variant: 'Red Panax' },
+      { quote: "If you want that natural power boost before sex without any chemical side effects, this is it. The wild noni mix hits the blood flow instantly and the balm keeps everything super sensitive and active.", name: 'Imran K.', location: 'Sylhet', variant: 'Saffron' },
     ],
   },
 };
