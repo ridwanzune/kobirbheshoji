@@ -31,11 +31,11 @@ export default function Testimonials() {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="relative py-28 md:py-40 section-testimonials grain">
+    <section className="relative py-16 sm:py-20 md:py-40 section-testimonials grain">
       {/* Glow spot */}
       <div className="absolute top-1/2 left-1/4 w-[400px] h-[400px] radial-spot radial-spot-green opacity-20 -translate-y-1/2" />
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-20">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 sm:gap-10 md:gap-20">
           <div className="md:col-span-4 flex flex-col justify-between">
             <div>
               <motion.span
@@ -52,18 +52,18 @@ export default function Testimonials() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: [0.2, 0, 0, 1] }}
-                className={`${lang === 'bn' ? 'font-bangla' : 'font-display'} font-light text-[clamp(2rem,4vw,3.5rem)] leading-[1.05] tracking-[-0.02em] text-[var(--fg)] whitespace-pre-line`}
+                className={`${lang === 'bn' ? 'font-bangla' : 'font-display'} font-light text-[clamp(1.6rem,5vw,3.5rem)] leading-[1.05] tracking-[-0.02em] text-[var(--fg)] whitespace-pre-line`}
               >
                 {text.heading}
               </motion.h2>
             </div>
 
-            <div className="flex gap-3 mt-10 md:mt-0">
+            <div className="flex gap-3 mt-8 md:mt-0">
               {text.testimonials.map((_, i) => (
                 <button
                   key={i}
                   onClick={() => setActive(i)}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${i === active ? 'bg-[var(--accent)] w-6' : 'bg-[var(--border-light)] hover:bg-[var(--muted)]'}`}
+                  className={`w-2.5 h-2.5 sm:w-2 sm:h-2 rounded-full transition-all duration-300 ${i === active ? 'bg-[var(--accent)] w-7 sm:w-6' : 'bg-[var(--border-light)] hover:bg-[var(--muted)]'}`}
                   aria-label={`View testimonial ${i + 1}`}
                 />
               ))}
@@ -78,8 +78,8 @@ export default function Testimonials() {
               transition={{ duration: 0.5, ease: [0.2, 0, 0, 1] }}
               className="max-w-2xl"
             >
-              <div className="text-[var(--accent)] text-4xl font-display leading-none mb-6 opacity-30">&ldquo;</div>
-              <blockquote className={`${lang === 'bn' ? 'font-bangla' : 'font-display'} font-light text-[clamp(1.3rem,3vw,2.2rem)] leading-[1.2] tracking-[-0.01em] text-[var(--fg)] mb-10`}>
+              <div className="text-[var(--accent)] text-3xl sm:text-4xl font-display leading-none mb-4 sm:mb-6 opacity-30">&ldquo;</div>
+              <blockquote className={`${lang === 'bn' ? 'font-bangla' : 'font-display'} font-light text-[clamp(1.1rem,4vw,2.2rem)] leading-[1.2] tracking-[-0.01em] text-[var(--fg)] mb-8 sm:mb-10`}>
                 {text.testimonials[active].quote}
               </blockquote>
               <div className="flex items-center gap-4">

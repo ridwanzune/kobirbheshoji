@@ -75,8 +75,8 @@ export default function Hero() {
       />
 
       <motion.div
-        style={{ y: textY, opacity: textOpacity, paddingTop: '12vh' }}
-        className="absolute inset-0 z-10 flex flex-col items-center px-8 text-center"
+        style={{ y: textY, opacity: textOpacity, paddingTop: '8vh' }}
+        className="absolute inset-0 z-10 flex flex-col items-center px-5 sm:px-8 text-center"
       >
         <motion.div
           initial={{ scaleX: 0 }}
@@ -98,7 +98,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.7, ease: [0.2, 0, 0, 1] }}
-          className={`${lang === 'bn' ? 'font-bangla' : 'font-display'} font-light text-[clamp(1.6rem,4vw,3.5rem)] leading-[1.05] tracking-[-0.02em] text-[var(--fg)] max-w-[800px]`}
+          className={`${lang === 'bn' ? 'font-bangla' : 'font-display'} font-light text-[clamp(1.8rem,6vw,3.5rem)] leading-[1.05] tracking-[-0.02em] text-[var(--fg)] max-w-[800px]`}
         >
           <span className="text-[var(--accent)]">{text.headline}</span>
         </motion.h1>
@@ -107,7 +107,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1, ease: [0.2, 0, 0, 1] }}
-          className={`${lang === 'bn' ? 'font-bangla' : 'font-body'} text-[var(--fg-2)] text-sm md:text-base max-w-lg mt-5 md:mt-8 leading-relaxed line-clamp-2`}
+          className={`${lang === 'bn' ? 'font-bangla' : 'font-body'} text-[var(--fg-2)] text-[13px] sm:text-sm md:text-base max-w-lg mt-4 sm:mt-5 md:mt-8 leading-relaxed`}
         >
           {text.sub1}
           <br className="hidden md:block" />
@@ -118,13 +118,13 @@ export default function Hero() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.2, ease: [0.2, 0, 0, 1] }}
-          className="mt-8 md:mt-12 flex flex-col sm:flex-row items-center gap-3"
+          className="mt-6 sm:mt-8 md:mt-12 flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto px-5 sm:px-0"
         >
           <a
             href="https://wa.me/8801XXXXXXXXX"
             target="_blank"
             rel="noopener noreferrer"
-            className={`${lang === 'bn' ? 'font-bangla' : ''} btn-accent`}
+            className={`${lang === 'bn' ? 'font-bangla' : ''} btn-accent w-full sm:w-auto justify-center`}
           >
             {text.cta1}
             <svg className="btn-arrow w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -133,7 +133,7 @@ export default function Hero() {
           </a>
           <a
             href="#products"
-            className={`${lang === 'bn' ? 'font-bangla' : ''} btn-ghost-capsule`}
+            className={`${lang === 'bn' ? 'font-bangla' : ''} btn-ghost-capsule w-full sm:w-auto justify-center`}
           >
             {text.cta2}
           </a>
@@ -146,7 +146,7 @@ export default function Hero() {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 0.8 }}
         onClick={toggle}
-        className={`${lang === 'bn' ? 'font-bangla' : 'font-heading'} absolute bottom-6 right-6 md:bottom-10 md:right-10 z-10 px-4 py-2 text-[11px] tracking-[0.12em] uppercase border border-white/[0.08] rounded-full text-[var(--muted)] hover:text-[var(--fg)] hover:border-white/[0.18] hover:bg-white/[0.03] transition-all duration-200`}
+        className={`${lang === 'bn' ? 'font-bangla' : 'font-heading'} absolute bottom-20 sm:bottom-6 right-5 sm:right-6 md:bottom-10 md:right-10 z-10 px-4 py-2 text-[11px] tracking-[0.12em] uppercase border border-white/[0.08] rounded-full text-[var(--muted)] hover:text-[var(--fg)] hover:border-white/[0.18] hover:bg-white/[0.03] transition-all duration-200`}
       >
         {lang === 'bn' ? 'EN' : 'বাং'}
       </motion.button>
@@ -156,7 +156,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2, duration: 1 }}
-        className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 z-10"
+        className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 z-10 hidden sm:block"
       >
         <div className="w-5 h-8 border border-[var(--fg-2)]/30 rounded-full flex justify-center pt-1.5">
           <motion.div

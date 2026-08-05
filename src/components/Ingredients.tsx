@@ -33,7 +33,7 @@ export default function Ingredients() {
   return (
     <section id="ingredients" className="relative section-ingredients grain">
       {/* Header */}
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12 pt-28 md:pt-40 pb-12 md:pb-20">
+      <div className="max-w-[1400px] mx-auto px-5 sm:px-6 md:px-12 pt-16 sm:pt-20 md:pt-40 pb-8 sm:pb-12 md:pb-20">
         <motion.span
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -55,16 +55,16 @@ export default function Ingredients() {
       </div>
 
       {/* Ingredient grid — magazine editorial style */}
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12 pb-28 md:pb-40">
+      <div className="max-w-[1400px] mx-auto px-5 sm:px-6 md:px-12 pb-16 sm:pb-20 md:pb-40">
         {/* Row 1: two large items */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-4 md:mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 md:gap-6 mb-3 sm:mb-4 md:mb-6">
           {text.items.slice(0, 2).map((item, i) => (
             <IngredientCard key={item.name} item={item} index={i} lang={lang} large />
           ))}
         </div>
 
         {/* Row 2: two smaller items */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 md:gap-6">
           {text.items.slice(2, 4).map((item, i) => (
             <IngredientCard key={item.name} item={item} index={i + 2} lang={lang} />
           ))}
@@ -91,7 +91,7 @@ function IngredientCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.7, delay: index * 0.08, ease: [0.2, 0, 0, 1] }}
-      className={`group relative overflow-hidden rounded-lg cursor-pointer ${large ? 'h-[30vh] md:h-[36vh]' : 'h-[24vh] md:h-[30vh]'}`}
+      className={`group relative overflow-hidden rounded-lg cursor-pointer ${large ? 'h-[22vh] sm:h-[28vh] md:h-[36vh]' : 'h-[18vh] sm:h-[22vh] md:h-[30vh]'}`}
     >
       {/* Full-bleed image */}
       <img
@@ -104,7 +104,7 @@ function IngredientCard({
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
       {/* Content — bottom left */}
-      <div className="absolute inset-0 p-4 md:p-6 flex flex-col justify-end">
+      <div className="absolute inset-0 p-3 sm:p-4 md:p-6 flex flex-col justify-end">
         {/* Accent dot */}
         <div className="w-1.5 h-1.5 rounded-full mb-2" style={{ backgroundColor: item.color }} />
 

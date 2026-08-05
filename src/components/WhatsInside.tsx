@@ -70,9 +70,9 @@ export default function WhatsInside() {
         <div className="absolute inset-0 bg-gradient-to-b from-[var(--bg)] via-[var(--bg)]/80 to-[var(--bg)]" />
       </div>
 
-      <div className="relative max-w-[1400px] mx-auto px-6 md:px-12 pt-28 md:pt-40 pb-28 md:pb-40">
+      <div className="relative max-w-[1400px] mx-auto px-5 sm:px-6 md:px-12 pt-16 sm:pt-20 md:pt-40 pb-16 sm:pb-20 md:pb-40">
         {/* Header */}
-        <div className="max-w-2xl mb-16 md:mb-24">
+        <div className="max-w-2xl mb-10 sm:mb-12 md:mb-24">
           <motion.span
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -87,7 +87,7 @@ export default function WhatsInside() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.2, 0, 0, 1] }}
-            className={`${lang === 'bn' ? 'font-bangla' : 'font-display'} font-light text-[clamp(2.4rem,6vw,4.5rem)] leading-[1.05] tracking-[-0.02em] text-[var(--fg)] whitespace-pre-line mb-6`}
+            className={`${lang === 'bn' ? 'font-bangla' : 'font-display'} font-light text-[clamp(1.8rem,6vw,4.5rem)] leading-[1.05] tracking-[-0.02em] text-[var(--fg)] whitespace-pre-line mb-4 sm:mb-6`}
           >
             {text.heading}
           </motion.h2>
@@ -96,7 +96,7 @@ export default function WhatsInside() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className={`${lang === 'bn' ? 'font-bangla' : 'font-body'} text-[var(--fg-2)] text-base md:text-lg leading-relaxed max-w-lg`}
+            className={`${lang === 'bn' ? 'font-bangla' : 'font-body'} text-[var(--fg-2)] text-[14px] sm:text-base md:text-lg leading-relaxed max-w-lg`}
           >
             {text.sub}
           </motion.p>
@@ -114,7 +114,7 @@ export default function WhatsInside() {
               className="group relative overflow-hidden rounded-lg bg-[var(--surface)] border border-[var(--border-light)]/5 hover:border-[var(--border-light)] transition-colors duration-500"
             >
               {/* Image */}
-              <div className="relative h-[27vh] md:h-[33vh] overflow-hidden">
+              <div className="relative h-[20vh] sm:h-[24vh] md:h-[33vh] overflow-hidden">
                 <img
                   src={packet.img}
                   alt={packet.name}
@@ -141,7 +141,7 @@ export default function WhatsInside() {
               </div>
 
               {/* Content */}
-              <div className="p-6 md:p-8 -mt-12 relative">
+              <div className="p-4 sm:p-5 md:p-8 -mt-10 sm:-mt-12 relative">
                 <div className="flex items-center gap-3 mb-3">
                   <div className="w-2 h-2 rounded-full" style={{ backgroundColor: packet.color }} />
                   <span className={`${lang === 'bn' ? 'font-bangla' : 'font-heading'} text-[11px] tracking-[0.15em] uppercase text-[var(--muted)]`}>
@@ -170,13 +170,13 @@ export default function WhatsInside() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.3 }}
-          className="mt-12 md:mt-16 flex justify-center"
+          className="mt-10 sm:mt-12 md:mt-16 flex justify-center px-5 sm:px-0"
         >
           <a
             href="https://wa.me/8801XXXXXXXXX"
             target="_blank"
             rel="noopener noreferrer"
-            className={`${lang === 'bn' ? 'font-bangla' : ''} btn-accent`}
+            className={`${lang === 'bn' ? 'font-bangla' : ''} btn-accent w-full sm:w-auto justify-center`}
           >
             {text.cta}
             <svg className="btn-arrow w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

@@ -38,7 +38,7 @@ export default function Story() {
       <div className="absolute top-1/2 right-0 w-[500px] h-[500px] radial-spot radial-spot-green opacity-30 -translate-y-1/2" />
 
       <div className="relative max-w-[1400px] mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-20 py-28 md:py-40">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-20 py-16 sm:py-20 md:py-40">
           <div className="md:col-span-5 flex flex-col justify-center">
             <motion.span
               initial={{ opacity: 0 }}
@@ -55,7 +55,7 @@ export default function Story() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: [0.2, 0, 0, 1] }}
-              className={`${lang === 'bn' ? 'font-bangla' : 'font-display'} font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.1] tracking-[-0.02em] text-[var(--fg)]`}
+              className={`${lang === 'bn' ? 'font-bangla' : 'font-display'} font-light text-[clamp(1.6rem,5vw,3.8rem)] leading-[1.1] tracking-[-0.02em] text-[var(--fg)]`}
             >
               &ldquo;{text.quote}&rdquo;
             </motion.blockquote>
@@ -84,7 +84,7 @@ export default function Story() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative mb-10 rounded-lg overflow-hidden h-[35vh] md:h-[45vh]"
+              className="relative mb-8 md:mb-10 rounded-lg overflow-hidden h-[25vh] sm:h-[30vh] md:h-[45vh]"
             >
               <img
                 src="/product image .jpeg"
@@ -94,7 +94,7 @@ export default function Story() {
               <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg)] via-transparent to-transparent opacity-60" />
             </motion.div>
 
-            <div className="space-y-8">
+            <div className="space-y-6 md:space-y-8">
               {text.blocks.map((block, i) => (
                 <motion.div
                   key={block.heading}
@@ -104,7 +104,7 @@ export default function Story() {
                   transition={{ duration: 0.7, delay: i * 0.1, ease: [0.2, 0, 0, 1] }}
                 >
                   <h3 className={`${lang === 'bn' ? 'font-bangla' : 'font-heading'} text-[var(--fg)] text-lg md:text-xl mb-3 tracking-tight`}>{block.heading}</h3>
-                  <p className={`${lang === 'bn' ? 'font-bangla' : ''} text-[var(--fg-2)] text-[15px] md:text-base leading-[1.7]`}>{block.text}</p>
+                  <p className={`${lang === 'bn' ? 'font-bangla' : ''} text-[var(--fg-2)] text-[14px] md:text-base leading-[1.7]`}>{block.text}</p>
                 </motion.div>
               ))}
             </div>

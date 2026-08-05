@@ -60,6 +60,7 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 body {
@@ -140,6 +141,7 @@ body {
    ======================================== */
 .grain {
   position: relative;
+  overflow: hidden;
 }
 
 .grain::after {
@@ -541,6 +543,34 @@ body {
   background: linear-gradient(90deg, transparent, var(--accent), transparent);
   background-size: 200% 100%;
   animation: shimmer 3s ease-in-out infinite;
+}
+
+/* ========================================
+   MOBILE TOUCH — always show hover content on touch devices
+   ======================================== */
+@media (hover: none) and (pointer: coarse) {
+  .group:hover .group-hover\:opacity-100 {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+  .group:hover .group-hover\:scale-105,
+  .group:hover .group-hover\:scale-110 {
+    transform: scale(1) !important;
+  }
+}
+
+/* ========================================
+   MOBILE UTILITIES
+   ======================================== */
+@media (max-width: 639px) {
+  .btn-accent,
+  .btn-primary,
+  .btn-ghost-capsule,
+  .btn-footer-cta {
+    min-height: 48px;
+    padding: 12px 24px;
+    font-size: 14px;
+  }
 }
 
 /* Reduced motion */

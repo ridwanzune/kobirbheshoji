@@ -43,9 +43,9 @@ export default function Navbar() {
             : 'bg-transparent'
         }`}
       >
-        <nav className="mx-auto max-w-[1400px] px-6 md:px-12 h-16 md:h-20 flex items-center justify-between">
+        <nav className="mx-auto max-w-[1400px] px-5 sm:px-6 md:px-12 h-14 sm:h-16 md:h-20 flex items-center justify-between">
           <a href="#" className="group">
-            <div className="h-12 md:h-14 w-auto overflow-hidden group-hover:scale-105 transition-all duration-300">
+            <div className="h-10 sm:h-12 md:h-14 w-auto overflow-hidden group-hover:scale-105 transition-all duration-300">
               <img src="/logo-nav.png" alt="Kobir Bheshoji" className="h-full w-auto object-contain" />
             </div>
           </a>
@@ -72,7 +72,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden w-10 h-10 flex items-center justify-center text-[var(--fg-2)]"
+            className="md:hidden w-11 h-11 flex items-center justify-center text-[var(--fg-2)] -mr-1"
             aria-label="Toggle menu"
           >
             {menuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -97,7 +97,7 @@ export default function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1, duration: 0.4, ease: [0.2, 0, 0, 1] }}
                 onClick={() => setMenuOpen(false)}
-                className={`${lang === 'bn' ? 'font-bangla' : 'font-display'} text-4xl tracking-tight text-[var(--fg)] hover:text-[var(--accent)] transition-colors`}
+                className={`${lang === 'bn' ? 'font-bangla' : 'font-display'} text-3xl sm:text-4xl tracking-tight text-[var(--fg)] hover:text-[var(--accent)] transition-colors py-2`}
               >
                 {link.label}
               </motion.a>
@@ -109,7 +109,7 @@ export default function Navbar() {
               transition={{ delay: 0.3, duration: 0.4, ease: [0.2, 0, 0, 1] }}
               target="_blank"
               rel="noopener noreferrer"
-              className={`${lang === 'bn' ? 'font-bangla' : ''} mt-4 btn-primary`}
+              className={`${lang === 'bn' ? 'font-bangla' : ''} mt-6 btn-primary w-full sm:w-auto justify-center`}
             >
               {cta[lang]}
             </motion.a>

@@ -78,7 +78,7 @@ export default function Pricing() {
       <div className="absolute top-1/4 left-1/3 w-[500px] h-[500px] radial-spot radial-spot-green opacity-25" />
       <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] radial-spot radial-spot-dark opacity-20" />
 
-      <div className="relative max-w-[1400px] mx-auto px-6 md:px-12 pt-24 md:pt-32 pb-24 md:pb-32">
+      <div className="relative max-w-[1400px] mx-auto px-5 sm:px-6 md:px-12 pt-16 sm:pt-20 md:pt-32 pb-16 sm:pb-20 md:pb-32">
         {/* Two-column layout: heading left, panel right */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left — heading */}
@@ -97,7 +97,7 @@ export default function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: [0.2, 0, 0, 1] }}
-              className={`${lang === 'bn' ? 'font-bangla' : 'font-display'} font-light text-[clamp(2.4rem,5.5vw,4rem)] leading-[1.02] tracking-[-0.02em] text-[var(--fg)] whitespace-pre-line mb-6`}
+              className={`${lang === 'bn' ? 'font-bangla' : 'font-display'} font-light text-[clamp(1.8rem,6vw,4rem)] leading-[1.02] tracking-[-0.02em] text-[var(--fg)] whitespace-pre-line mb-4 sm:mb-6`}
             >
               {lang === 'bn' ? 'Herbirod\nমূল্য' : 'Herbirod\nPricing'}
             </motion.h2>
@@ -119,7 +119,7 @@ export default function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="flex flex-wrap items-center gap-x-6 gap-y-3 mt-8"
+              className="flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-3 sm:gap-x-6 sm:gap-y-3 mt-6 sm:mt-8"
             >
               {trust.map((item) => (
                 <div key={item.label} className="flex items-center gap-2">
@@ -177,7 +177,7 @@ export default function Pricing() {
                   <button
                     key={d}
                     onClick={() => setActive(d)}
-                    className={`relative ${lang === 'bn' ? 'font-bangla' : 'font-heading'} text-[10px] tracking-[0.08em] uppercase px-3 py-1.5 rounded-full transition-all duration-250 ${
+                    className={`relative ${lang === 'bn' ? 'font-bangla' : 'font-heading'} text-[11px] tracking-[0.08em] uppercase px-4 py-2.5 sm:px-3 sm:py-1.5 rounded-full transition-all duration-250 ${
                       isActive
                         ? 'text-[var(--bg)]'
                         : 'text-[var(--muted)] hover:text-[var(--fg-2)]'
@@ -221,7 +221,7 @@ export default function Pricing() {
 
                 {/* Price + per-day */}
                 <div className="flex items-end gap-2.5 mb-1">
-                  <span className={`${lang === 'bn' ? 'font-bangla' : 'font-display'} font-light text-[clamp(1.6rem,4vw,2.2rem)] leading-[0.85] tracking-[-0.03em] text-[var(--fg)]`}>
+                  <span className={`${lang === 'bn' ? 'font-bangla' : 'font-display'} font-light text-[clamp(1.8rem,5vw,2.2rem)] leading-[0.85] tracking-[-0.03em] text-[var(--fg)]`}>
                     {plan.price}
                   </span>
                   <div className="flex items-baseline gap-1 pb-0.5">
@@ -260,7 +260,7 @@ export default function Pricing() {
                   href="https://wa.me/8801XXXXXXXXX"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`${lang === 'bn' ? 'font-bangla' : ''} btn-primary w-full justify-center`}
+                  className={`${lang === 'bn' ? 'font-bangla' : ''} btn-primary w-full justify-center min-h-[48px]`}
                 >
                   {plan.cta}
                   <svg className="btn-arrow w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
