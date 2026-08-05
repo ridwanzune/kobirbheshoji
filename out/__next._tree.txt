@@ -1,7 +1,7 @@
-:HL["/_next/static/chunks/44rkd-ea0xpu5.css","style"]
+:HL["/_next/static/chunks/024u1ol0rv2bh.css","style"]
 :HL["/_next/static/media/0c795a286deabae8-s.p.3vm0tq4e-zz_5.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/0c89a48fa5027cee-s.p.2cyn07wtgehh0.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/5c285b27cdda1fe8-s.p.2_mbdogr7ni8i.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/70c15719a04fff13-s.p.376yc-xi7tht7.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/herbirod unboxing.jpeg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"g3XroYOWnK4EWeg0C76CO"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"7zXrpSTNxj6ZFCS3NeUvR"}

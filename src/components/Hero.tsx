@@ -41,21 +41,21 @@ export default function Hero() {
     <>
     <section
       ref={containerRef}
-      className="relative w-full overflow-hidden bg-[var(--bg)] grain"
+      className="relative w-full overflow-hidden bg-[var(--bg)] grain h-[100dvh] md:h-auto"
     >
       {/* Atmospheric glow spots */}
       <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] radial-spot radial-spot-green opacity-60" />
       <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] radial-spot radial-spot-dark opacity-40" />
 
-      <div className="relative w-full overflow-hidden">
-        <motion.div style={{ scale: videoScale }} className="w-full">
+      {/* Video — mobile: absolute fill, crop sides to 9:16. Desktop: normal flow */}
+      <div className="absolute inset-0 md:relative md:w-full md:overflow-hidden">
+        <motion.div style={{ scale: videoScale }} className="w-full h-full md:h-auto">
           <video
             autoPlay
             loop
             muted
             playsInline
-            className="w-full h-auto block"
-            style={{ marginTop: '-20vw' }}
+            className="w-full h-full object-cover md:h-auto md:block md:object-contain md:mt-[-20vw]"
             poster="/hero-ref.jpeg"
           >
             <source src="/hero-video.mp4" type="video/mp4" />
@@ -74,9 +74,10 @@ export default function Hero() {
         }}
       />
 
+      {/* Text — mobile: bottom of screen. Desktop: top with padding */}
       <motion.div
-        style={{ y: textY, opacity: textOpacity, paddingTop: '8vh' }}
-        className="absolute inset-0 z-10 flex flex-col items-center px-5 sm:px-8 text-center"
+        style={{ y: textY, opacity: textOpacity }}
+        className="absolute inset-0 z-10 flex flex-col items-center px-5 sm:px-8 text-center pt-[18vh] md:pt-[8vh] justify-start md:justify-center"
       >
         <motion.div
           initial={{ scaleX: 0 }}
@@ -146,17 +147,17 @@ export default function Hero() {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 0.8 }}
         onClick={toggle}
-        className={`${lang === 'bn' ? 'font-bangla' : 'font-heading'} absolute bottom-20 sm:bottom-6 right-5 sm:right-6 md:bottom-10 md:right-10 z-10 px-4 py-2 text-[11px] tracking-[0.12em] uppercase border border-white/[0.08] rounded-full text-[var(--muted)] hover:text-[var(--fg)] hover:border-white/[0.18] hover:bg-white/[0.03] transition-all duration-200`}
+        className={`${lang === 'bn' ? 'font-bangla' : 'font-heading'} absolute bottom-6 sm:bottom-6 right-5 sm:right-6 md:bottom-10 md:right-10 z-10 px-4 py-2 text-[11px] tracking-[0.12em] uppercase border border-white/[0.08] rounded-full text-[var(--muted)] hover:text-[var(--fg)] hover:border-white/[0.18] hover:bg-white/[0.03] transition-all duration-200`}
       >
         {lang === 'bn' ? 'EN' : 'বাং'}
       </motion.button>
 
-      {/* Scroll indicator */}
+      {/* Scroll indicator — desktop only */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2, duration: 1 }}
-        className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 z-10 hidden sm:block"
+        className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 z-10 hidden md:block"
       >
         <div className="w-5 h-8 border border-[var(--fg-2)]/30 rounded-full flex justify-center pt-1.5">
           <motion.div
